@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Analyzer</title>
+</head>
+<body>
+    <script>
+        //Get input and convert to number using parseInt()
+        let userInput = prompt("Please enter a number:");
+        let number = parseInt(userInput);
+
+        //Input validation check for if it's a number or a negative 
+        if (isNaN(number) || number <= 0 || number !== parseFloat(userInput)) {
+            alert("Invalid input! Please enter a valid, positive, whole number.");
+        } else {            
+            //checking for even or Odd
+            let evenOddResult;
+            if (number % 2 === 0) {
+                evenOddResult = "even";
+            } else {
+                evenOddResult = "odd";
+            }
+
+            //checking for prime or not prime
+            let isPrime = true;
+            if (number === 1) {
+                isPrime = false;
+            } else {
+                for (let i = 2; i <= Math.sqrt(number); i++) {
+                    if (number % i === 0) {
+                        isPrime = false;
+                        break; // Exit the loop immediately
+                    }
+                }
+            }
+
+            let primeResult = isPrime ? "prime" : "not prime";
+            
+            //display final results
+            let message = `For the number ${number}, it is ${evenOddResult} and ${primeResult}.`;
+
+            alert(message);
+        }
+    </script>
+
+</body>
+</html>
