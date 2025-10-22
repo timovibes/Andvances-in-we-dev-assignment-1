@@ -16,8 +16,8 @@ This is a simple code for Assignment 1 in Advances in web development that check
 ## How to Run
 No setup needed as everything’s in one file.
 
+## Submitted by 22/05730
+
 **Clone this repo:**
 ```bash
 git clone https://github.com/timovibes/Andvances-in-we-dev-assignment-1
-
-Submitted by 22/05730
